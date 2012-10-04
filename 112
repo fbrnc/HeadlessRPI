@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [ ! -z "$(pidof gphoto2)" ]; then
+  echo "There is another active capture. Stop it using 1 1 3" | festival --tts
+  exit 1
+fi
+
+FOLDERNAME=`date +"%Y-%m-%d_%H-%M-%S"`
+
+mkdir /home/111/timelapses/$FOLDERNAME
+chmod ug+rw /home/111/timelapses/$FOLDERNAME
+
+unlink /home/111/timelapses/latest
+ln -s /home/111/timelapses/$FOLDERNAME /home/111/timelapses/latest
+
+echo "Starting capture" | festival --tts
+
+cd /home/111/timelapses/$FOLDERNAME
+
+nohup gphoto2 --auto-detect --capture-image-and-download --filename=/home/111/timelapses/$FOLDERNAME/`date +"%Y-%m-%d_%H-%M-%S"`-%04n.%C -F 0 -I 5 i &

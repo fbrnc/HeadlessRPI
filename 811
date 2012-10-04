@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Turning on wifi" | festival --tts
+
+sudo ifup wlan0

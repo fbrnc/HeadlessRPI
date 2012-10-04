@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Last error message of latest capture is: " | festival --tts
+cat /home/111/timelapses/latest/nohup.out | grep ERROR | tail -1 | festival --tts

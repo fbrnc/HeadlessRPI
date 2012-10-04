@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "Free disk space: `df -Ph /home/111/timelapses/ | tail -1 | awk '{print $4}'`" | festival --tts

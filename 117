@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Camera detection" | festival --tts
+gphoto2 --auto-detect | festival --tts

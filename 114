@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -z "$(pidof gphoto2)" ]; then
+  echo "No active capture found" | festival --tts
+else
+  echo "Active capture found" | festival --tts
+fi
+
+echo "`ls -l /home/111/timelapses/latest/ | wc -l` images found in latest capture" | festival --tts

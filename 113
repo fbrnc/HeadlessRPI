@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -z "$(pidof gphoto2)" ]; then
+  echo "There is no active capture that can be stopped" | festival --tts
+  exit 1
+fi
+
+echo "Stopping capture" | festival --tts
+
+kill `pidof gphoto2`

@@ -1,0 +1,11 @@
+1.) Create user "111":
+
+sudo adduser 111 --force-badname
+
+2.) Add user to correct groups
+
+3.) Add HeadlessRPI to path in .bashrc
+
+4.) Allow executing some commands with sudo password
+
+5.) Install festival

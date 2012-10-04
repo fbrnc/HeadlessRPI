@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "1 1 2: Start capture" | festival --tts
+echo "1 1 3: Stop capture" | festival --tts
+echo "1 1 4: Capture status" | festival --tts
+echo "1 1 5: Last error message" | festival --tts
+echo "1 1 6: Free disk space" | festival --tts
+echo "1 1 7: Camera detection" | festival --tts
+echo "8 1 1: Turn on wifi" | festival --tts
+echo "8 1 2: Turn of wifi" | festival --tts
+echo "9 9 8: Shut down" | festival --tts
